@@ -121,7 +121,7 @@ get_header(); ?>
 								resizeFrame();
 							</script>
 					<?php else:
-							$insta = file_get_contents('https://api.instagram.com/v1/users/1297925718/media/recent/?access_token='.getenv('INSTA_TOKEN').'&count=50');
+							$insta = file_get_contents('https://api.instagram.com/v1/users/1297925718/media/recent/?access_token='. INSTA_TOKEN .'&count=50');
 							$insta = json_decode($insta, true)['data'];
 					?>
 						<?php foreach($insta as $gram): ?>
