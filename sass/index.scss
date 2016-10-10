@@ -120,10 +120,11 @@ div.reading-zone {
 
 div.egg {
     position: fixed;
-    width: 100%;
+    width: 90%;
     bottom: 0;
     height: 100px;
-    z-index: 100;
+    right: 0;
+    z-index: 1500;
     transform: translateY(45px);
     transition: transform 0.3s ease-out;
     opacity: 0.2;
