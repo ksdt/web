@@ -102,21 +102,21 @@ show_admin_bar(false);
 
 /* https://codex.wordpress.org/Rewrite_API/add_rewrite_rule */
 function custom_rewrite_basic() {
-	
-	/* playlist/1015 => playlist/?playlist=1015 
-	
+
+	/* playlist/1015 => playlist/?playlist=1015
+
 
 	  doesn't work
 		playlist/1015 => ksdt.org/playlist => index.php?page_id=69
-		
+
 		http://regexr.com/
 	*/
   add_rewrite_rule('^playlist\/([0-9]+)\/?$', 'index.php?pagename=playlist&playlist=$matches[1]', 'top');
-  
+
   /* show/Burger Town => show/?showName=Burger Town */
   /* http://regexr.com/3e2gg */
   add_rewrite_rule('^show\/(.*)/?$', 'index.php?pagename=show&showName=$matches[1]', 'top');
-  
+
   add_rewrite_rule('^writings/blog', 'index.php?pagename=posts', 'top');
 }
 add_action('init', 'custom_rewrite_basic');
@@ -131,7 +131,7 @@ add_filter( 'query_vars', 'add_query_vars_filter' );
 
 
 function create_post_type() {
-	
+
   /* creates custom 'album review' posts */
   register_post_type( 'albumreviews',
     array(
@@ -148,7 +148,7 @@ function create_post_type() {
 			'taxonomies' => array('category'),
     )
   );
-  
+
   /* creates custom 'weeklypicks' posts */
   register_post_type( 'weeklypicks',
     array(
@@ -165,7 +165,7 @@ function create_post_type() {
 			'taxonomies' => array('category'),
     )
   );
-  
+
   /* creates custom 'concertreviews' posts */
   register_post_type( 'concertreviews',
     array(
@@ -182,8 +182,8 @@ function create_post_type() {
 			'taxonomies' => array('category'),
     )
   );
-  
-  
+
+
 }
 
 add_action( 'init', 'create_post_type' );
@@ -215,7 +215,7 @@ add_action( 'customize_register', 'mytheme_customize_register' );
  */
 function xx_scripts() {
 	wp_enqueue_style( 'xx-style', get_stylesheet_uri() );
-	wp_enqueue_style( 'xx-sass-styles', get_template_directory_uri() . '/sass/index.css');
+	wp_enqueue_style( 'xx-sass-styles', get_template_directory_uri() . '/sass/index.min.css');
 
 	wp_enqueue_script( 'zoom', get_template_directory_uri() . '/js/zoom.min.js', array('jquery'), '', true);
 	wp_enqueue_script( 'xx-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );

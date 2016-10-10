@@ -49,11 +49,11 @@ div.reading-zone {
             display: inline-block;
             margin-left: 0.5rem;
             margin-bottom: 0.5rem;
-        } 
+        }
     }
     .fluidbox__wrap {
         width: 30%;
-        display: inline-block; 
+        display: inline-block;
     }
     .fluidbox__ghost {
         &:hover {
@@ -118,6 +118,29 @@ div.reading-zone {
     margin-top: 2rem;
 }
 
+div.egg {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    z-index: 100;
+    transform: translateY(45px);
+    transition: transform 0.3s ease-out;
+    opacity: 0.2;
+    img {
+        position: absolute;
+        width: 100px;
+        bottom: 0;
+        right: 0;
+        transition: transform 0.3s ease-out;
+        &:hover {
+            transform: rotate(10deg);
+        }
+    }
+}
+
+
+
 header.site-header {
     @media screen and (max-width: $SM) {
         position: relative;
@@ -160,8 +183,8 @@ header.site-header {
     .navbar-extend {
         width: 100%;
     }
-    
-    span.ksdt-name {
+
+    div.ksdt-name {
         background-color: white;
         a {
             color: inherit;
@@ -178,9 +201,12 @@ header.site-header {
         font-size: 3rem;
         font-family: Verdana;
         font-style: italic;
-        cursor: crosshair;
         padding-left: 3rem;
-        span.ksdt-name-sub {
+        a {
+            cursor: crosshair;
+            z-index: 5000;
+        }
+        a.ksdt-name-sub {
             font-size: 1.5rem;
             cursor: help;
             display: inline;
@@ -198,7 +224,7 @@ header.site-header {
 }
 
 ul.index-post-list {
-    @media screen and (max-width: $SM) { 
+    @media screen and (max-width: $SM) {
         border: none;
         margin: auto;
     }
@@ -208,9 +234,9 @@ ul.index-post-list {
     max-width: 400px;
     padding: 0;
     font-family: $fontmono;
-    
+
     border-right: 1px solid #d9d9d9;
-    
+
     a.index-post-link {
         &:hover {
             color: inherit;
@@ -220,22 +246,22 @@ ul.index-post-list {
                 &.featured {
                     background-color: #eef095;
                 }
-                cursor: crosshair; 
+                cursor: crosshair;
                 @media screen and (max-width: $SM) {
                     cursor: pointer;
                 }
             }
         }
     }
-    
+
     li.index-post-entry {
         padding: 0.2rem 0.5rem;
         margin: 0.5rem;
-        
+
         &.featured {
             background-color: yellow;
         }
-        
+
         article.index-post {
             h1 {
                 font-size: 1rem;
@@ -267,7 +293,7 @@ ul.index-post-list {
             }
         }
     }
-    
+
     hr {
         margin: 0;
         width: 75%;
@@ -278,7 +304,7 @@ ul.index-post-list {
 }
 
 .player {
-    @media screen and (max-width: $SM) { 
+    @media screen and (max-width: $SM) {
         display: none;
     }
     display: inline-block;
@@ -287,6 +313,32 @@ ul.index-post-list {
     i {
         cursor: crosshair;
     }
+}
+.visualizer {
+    position: absolute;
+    width: 283px;
+    height: 100%;
+    top: -5px;
+    z-index: -5000;
+    canvas {
+        opacity: 0.1;
+        width: 100%;
+        height: 100%;
+    }
+}
+.oscilloscope {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -10px;
+    top: 10px;
+}
+.oscilloscope__wave {
+	fill: none;
+
+    stroke: #000000;
+    stroke-width: 0.5px;
 }
 
 
@@ -317,7 +369,7 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
                 content: "";
                 width: 175px;
                 display: block;
-                overflow: hidden; 
+                overflow: hidden;
             }
             max-width: 450px;
             font-size: 0.8rem;
@@ -348,7 +400,7 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
             }
         }
     }
-    
+
     .featured-lead {
         max-height: 500px;
         height: 500px;
@@ -384,7 +436,7 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
         max-width: 450px;
         margin: auto !important;
     }
-    
+
     /* instagram embedded images */
     .instagram-media {
         margin-left: auto !important;
@@ -525,7 +577,7 @@ article.page.programming {
                     }
                 }
                 .show {
-                    
+
                     display: inline-block;
                     &:hover {
                         opacity: 0.8;
@@ -553,7 +605,7 @@ article.page.programming {
             }
         }
     }
-    
+
 }
 
 article.page.contact {
@@ -584,7 +636,7 @@ article.page.contact {
                     display: block;
                 }
             }
-    
+
         }
     }
 }
@@ -603,11 +655,11 @@ article.page.events {
             margin-left: 15px;
             font-size: 3em;
         }
-        
+
         .image-div {
             max-height: 150px;
             height: 150px;
-            
+
             .image-extended {
                 object-fit: cover;
                 min-height: 150px;
@@ -615,11 +667,11 @@ article.page.events {
                 width: 100%;
             }
         }
-        
+
         .card-block-extended {
             height: 150px;
             max-height: 150px;
-            
+
             .card-title-extended {
                 white-space: nowrap;
                 overflow: hidden;
@@ -627,13 +679,13 @@ article.page.events {
             }
         }
     }
-    
-    
+
+
 }
 
 /* writings -- added by Raymond */
 article.page.writings {
-    
+
     .entry-content {
         margin-left: 20px;
     }
@@ -651,11 +703,11 @@ article.page.writings {
             @media (max-width: 767px) {
                 display: none;
             }
-            
+
             .image-div {
                 max-height: 180px;
                 height: 180px;
-                
+
                 .image-extended {
                     object-fit: cover;
                     min-height: 180px;
@@ -663,17 +715,17 @@ article.page.writings {
                     width: 100%;
                 }
             }
-            
+
             .no-image {
                 max-height: 180px;
                 min-height: 180px;
                 background-color: black;
             }
-            
+
             .card-block-extended {
                 height: 170px;
                 max-height: 170px;
-                
+
                 .card-title-extended {
                     white-space: nowrap;
                     overflow: hidden;
@@ -689,9 +741,9 @@ article.page.writings {
         .col-title {
             padding: 0;
             margin: 0;
-            
+
             .writings-container {
-                
+
             }
             .writings-container {
                 background-color: #404040;
@@ -700,7 +752,7 @@ article.page.writings {
                 position: relative;
                 overflow: hidden;
                 font-family: $fontserious;
-        
+
                 .writings-text {
                     text-transform: uppercase;
                     color: white;
@@ -718,11 +770,11 @@ article.page.writings {
             }
         }
     }
-    
+
 }
 
 
-article.hentry.albumreviews, article.hentry.concertreviews, 
+article.hentry.albumreviews, article.hentry.concertreviews,
 article.hentry.weeklypicks, article.blog {
     margin-left: 15px;
     .row {
@@ -734,7 +786,7 @@ article.hentry.weeklypicks, article.blog {
             .image-div {
                 max-height: 180px;
                 height: 180px;
-                
+
                 .image-extended {
                     object-fit: cover;
                     min-height: 180px;
@@ -742,17 +794,17 @@ article.hentry.weeklypicks, article.blog {
                     width: 100%;
                 }
             }
-            
+
             .no-image {
                 max-height: 180px;
                 min-height: 180px;
                 background-color: black;
             }
-            
+
             .card-block-extended {
                 height: 170px;
                 max-height: 170px;
-                
+
                 .card-title-extended {
                     white-space: nowrap;
                     overflow: hidden;
@@ -763,13 +815,13 @@ article.hentry.weeklypicks, article.blog {
     }
     /*
     .col-extended {
-        
+
         border-style: groove;
         border-width: 0px 1px 0px 0px;
         border-color: #404040;
-        
-        
-    
+
+
+
     @media (max-width: 543px){
         margin-top: 15px;
         padding-top: 20px;
@@ -777,26 +829,26 @@ article.hentry.weeklypicks, article.blog {
         border-width: 1px 0px 0px 0px;
         border-color: #404040;
         }
-    
+
    @media (max-width: 767px) {
        margin-top: 50px;
    }
-   
+
    @media (max-width: 991px) {
        margin-top: 50px;
    }
-    
+
         //margin-top: 20px;
         overflow: hidden;
     }
-    
 
-    
+
+
     h1{
         font-size: 4em;
         //color: #404040;
     }
-    
+
     .archive-container {
         font-family: $fontserious;
         height: 300px;
@@ -806,7 +858,7 @@ article.hentry.weeklypicks, article.blog {
 
 
     }
-    
+
     .archive-container:hover{
         opacity: 0.5;
     } */
@@ -824,7 +876,7 @@ article.page.blog {
             .image-div {
                 max-height: 180px;
                 height: 180px;
-                
+
                 .image-extended {
                     object-fit: cover;
                     min-height: 180px;
@@ -832,17 +884,17 @@ article.page.blog {
                     width: 100%;
                 }
             }
-            
+
             .no-image {
                 max-height: 180px;
                 min-height: 180px;
                 background-color: black;
             }
-            
+
             .card-block-extended {
                 height: 170px;
                 max-height: 170px;
-                
+
                 .card-title-extended {
                     white-space: nowrap;
                     overflow: hidden;
@@ -883,13 +935,13 @@ article.page.blog {
 }
 
 @keyframes sk-rotateplane {
-  0% { 
+  0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg) 
-  } 50% { 
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
     transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg) 
-  } 100% { 
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
@@ -933,4 +985,3 @@ img.zoom-img {
   filter: "alpha(opacity=100)";
   opacity: 1;
 }
-

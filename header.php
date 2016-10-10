@@ -26,20 +26,22 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
-		<span class="ksdt-name">
+		<div class="ksdt-name">
 			<a href="/">KSDT Radio</a>
-			<span class="ksdt-name-sub">
-				<a href="/contact">LA JOLLA, CA</a>
-			</span>
-		</span>
+			<a class="ksdt-name-sub" href="/contact">LA JOLLA, CA</a>
+			<div class="oscilloscope"></div>
+			<div class="visualizer">
+				<canvas id="vis"></canvas>
+			</div>
+		</div>
+
 		<nav class="navbar navbar-light bg-faded navbar-extend">
-			
 			<div class="collapse navbar-toggleable-md" id="exCollapsingNavbar2">
 				<ul class="nav navbar-nav">
 					<?php $main_menu = wp_get_nav_menu_items('main'); ?>
-					
+
 					<?php foreach ((array) $main_menu as $key => $menu_item): ?>
-                		<?php 
+                		<?php
                 			$title = $menu_item->title;
 					        $url = $menu_item->url;
 					    ?>
@@ -47,17 +49,17 @@
 							<a class="nav-link" href="<?php echo $url; ?>"><?php echo $title; ?></a>
 						</li>
                     <?php endforeach; ?>
-					
+
 				</ul>
-        <div class="player">
-            <i class="fa fa-play" aria-hidden="true"></i>
-        </div>
+		        <div class="player">
+		            <i class="fa fa-play" aria-hidden="true"></i>
+		        </div>
 			</div>
 			<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">
-				    &#9776;
-				  </button>
+				&#9776;
+			</button>
 		</nav>
-            
+
 	</header><!-- #masthead -->
 	<div class="spinner"></div>
 	<div id="content" class="site-content">

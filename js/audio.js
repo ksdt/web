@@ -16,7 +16,7 @@
         this.sourceNode = null;
         this.audioElement = null;
         this.passthru = (options && 'passthru' in options) ? options.passthru : false;
-        this.mono = (options && 'mono' in options) ? options.mono : true;
+        this.mono = (options && 'mono' in options) ? options.mono : false;
         this.smoothing = (options && 'smoothing' in options) ? options.smoothing : 0;
         this.rmsValues = [];
         this.channelCount = -1;
@@ -142,47 +142,30 @@
     /* sets up audio api graph, channel splitters/mergers if non-mono, passthru to destination. */
     _AudioAnalyser.prototype.createGraph = function () {
         if (!this.mono) {
+            channels = 2;
 
-            (new Promise((resolve, reject) => {
-                /* determine how many channels there are */
-                var xhr = new XMLHttpRequest();
-                xhr.open('GET', this.audioElement.src, true);
-                xhr.responseType = "arraybuffer";
-                xhr.onload = (function() {
-                  this.audioContext.decodeAudioData(xhr.response, function(decodedBuffer) {
-                    resolve(decodedBuffer.numberOfChannels);
-                  });
-                }).bind(this);
-                xhr.error = function () {
-                    reject("Unable to retrieve channels.");
-                }
-                xhr.send(null);
-            })).then((channels) => {
+            this.channelCount = channels;
+            this.channelSplitter = this.audioContext.createChannelSplitter(channels);
 
-                this.channelCount = channels;
-                this.channelSplitter = this.audioContext.createChannelSplitter(channels);
+            if (this.passthru) {
+                this.channelMerger = this.audioContext.createChannelMerger(channels);
+            }
 
+            this.sourceNode.connect(this.channelSplitter);
+
+            for (var i = 0; i < channels; i++) {
+                this.analyserNodes.push(
+                    (this.audioContext.createAnalyser())
+                );
+                this.analyserNodes[i].smoothingTimeConstant = this.smoothing;
+                this.channelSplitter.connect(this.analyserNodes[i], i, 0);
                 if (this.passthru) {
-                    this.channelMerger = this.audioContext.createChannelMerger(channels);
+                    this.analyserNodes[i].connect(this.channelMerger, 0, i);
                 }
-
-                this.sourceNode.connect(this.channelSplitter);
-
-                for (var i = 0; i < channels; i++) {
-                    this.analyserNodes.push(
-                        (this.audioContext.createAnalyser())
-                    );
-                    this.analyserNodes[i].smoothingTimeConstant = this.smoothing;
-                    this.channelSplitter.connect(this.analyserNodes[i], i, 0);
-                    if (this.passthru) {
-                        this.analyserNodes[i].connect(this.channelMerger, 0, i);
-                    }
-                }
-                if (this.passthru) {
-                    this.channelMerger.connect(this.audioContext.destination);
-                }
-            });
-
+            }
+            if (this.passthru) {
+                this.channelMerger.connect(this.audioContext.destination);
+            }
         } else if (this.mono) {
             this.analyserNodes[0] = this.audioContext.createAnalyser();
             this.analyserNodes[0].smoothingTimeConstant = this.smoothing;
@@ -252,4 +235,3 @@
 
     global.AudioAnalyser = AudioAnalyser;
 })(this);
-
