@@ -245,12 +245,12 @@
 			var path = 'M';
 
 			if (this._xy) { //xy mode
-		        for (var i = 0; i < byteFreqDatas[0].length; i++) {
-		            	path += (this._height / 2 * (byteFreqDatas[0][i] / 128)) + ' ' + (this._height / 2 * (byteFreqDatas[1][i] / 128)) + ', ';
+		        for (var i = 0; i < byteFreqDatas[0].length - 400; i++) {
+	            	path += (this._height / 2 * ((byteFreqDatas[0][i] / 128)) ) + ' ' + (this._height / 2 * ((byteFreqDatas[1][i] / 128))) + ', ';
 		        }
 			} else {
 				for (var i = 0; i < byteFreqDatas[0].length; i++) {
-					path += ((this._width + (this._width / byteFreqDatas[0].length)/ byteFreqDatas[0].length) * i) + ' ' + (this._height / 2) * (byteFreqDatas[0][i] / 128.0) + ', ';
+					path += ((this._width / byteFreqDatas[0].length) * i) + ' ' + ((this._height / 2.0) + ((this._height) * ((byteFreqDatas[0][i] - 128.0) / 100))) + ', ';
 				}
 			}
 
@@ -259,6 +259,13 @@
 	};
 	$(Oscilloscope._elem).click(function() {
 		Oscilloscope._xy = !Oscilloscope._xy;
+		if (Oscilloscope._xy) {
+			$(Oscilloscope.svg).css('transform', 'scale(4.5)');
+			$('.oscilloscope__wave').css('stroke-width', '0.1px');
+		} else {
+			$(Oscilloscope.svg).css('transform', 'scale(1)');
+			$('.oscilloscope__wave').css('stroke-width', '0.5px');
+		}
 	})
 
 
