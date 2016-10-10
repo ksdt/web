@@ -390,6 +390,10 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
             margin-left: auto;
             margin-right: auto;
         }
+        iframe.youtube-player {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
         figure {
             width: 100%;
             > figcaption {
