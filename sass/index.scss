@@ -181,7 +181,7 @@ header.site-header {
         li.nav-mobile-item {
             display: none;
             @media screen and (max-width: $SM) {
-                display: inline-block;
+                display: block;
             }
         }
     }
