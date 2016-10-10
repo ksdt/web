@@ -396,6 +396,9 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
                 font-size: 90%;
                 color: #818a91;
             }
+            &.alignnone {
+                padding-left: 4rem;
+            }
             &.alignleft {
                 width: inherit;
                 margin-left: 13vw;
