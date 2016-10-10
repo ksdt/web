@@ -46,7 +46,7 @@
 					        $url = $menu_item->url;
 					    ?>
 						<li class="nav-item">
-							<a class="nav-link" href="<?php echo $url; ?>"><?php echo $title; ?></a>
+							<a class="nav-link local-link" href="<?php echo $url; ?>"><?php echo $title; ?></a>
 						</li>
                     <?php endforeach; ?>
 					<li class="nav-item nav-mobile-item">

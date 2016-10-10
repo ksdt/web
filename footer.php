@@ -82,9 +82,7 @@
 	});
 
 	/* on nav links, reload full view */
-	$('header').on('click', 'a.nav-link', function(e) {
-		if ($(e.currentTarget).parent().hasClass('nav-mobile-link'))
-			return;
+	$('header').on('click', 'a.nav-link.local-link', function(e) {
 		var url = $(e.currentTarget).attr('href');
 		console.log(url);
 		sickAjaxRoutine(url, 'main.site-main', 'main.site-main', false);
