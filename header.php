@@ -50,10 +50,10 @@
 						</li>
                     <?php endforeach; ?>
 					<li class="nav-item nav-mobile-item">
-						<a href="//tunein.com/radio/KSDT-s18746/">listen on tunein app</a>
+						<a class="nav-link" href="//tunein.com/radio/KSDT-s18746/">listen on tunein app</a>
 					</li>
 					<li class="nav-item nav-mobile-item">
-						<a href="https://ksdt.ucsd.edu/listen/stream.mp3">listen in browser</a>
+						<a class="nav-link" href="https://ksdt.ucsd.edu/listen/stream.mp3">listen in browser</a>
 					</li>
 
 				</ul>
