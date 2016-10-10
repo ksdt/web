@@ -178,6 +178,12 @@ header.site-header {
                 cursor: crosshair;
             }
         }
+        li.nav-mobile-item {
+            display: none;
+            @media screen and (max-width: $SM) {
+                display: inline-block;
+            }
+        }
     }
     .bg-faded {
         background-color: white;

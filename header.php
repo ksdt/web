@@ -49,6 +49,12 @@
 							<a class="nav-link" href="<?php echo $url; ?>"><?php echo $title; ?></a>
 						</li>
                     <?php endforeach; ?>
+					<li class="nav-item nav-mobile-item">
+						<a href="//tunein.com/radio/KSDT-s18746/">listen on tunein app</a>
+					</li>
+					<li class="nav-item nav-mobile-item">
+						<a href="https://ksdt.ucsd.edu/listen/stream.mp3">listen in browser</a>
+					</li>
 
 				</ul>
 		        <div class="player">
