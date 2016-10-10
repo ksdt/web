@@ -122,6 +122,7 @@ div.egg {
     position: fixed;
     width: 90%;
     bottom: 0;
+    pointer-events: none;
     height: 100px;
     right: 0;
     z-index: 1500;
@@ -132,6 +133,7 @@ div.egg {
         position: absolute;
         width: 100px;
         bottom: 0;
+        pointer-events: all;
         right: 0;
         transition: transform 0.3s ease-out;
         &:hover {
