@@ -192,6 +192,18 @@ header.site-header {
     .navbar-extend {
         width: 100%;
     }
+    .listen-now-button {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        color: white;
+        font-family: 'Verdana';
+        display: none;
+        margin-top: 1rem;
+        @media screen and (max-width: $SM) {
+            display: block;
+        }
+    }
 
     div.ksdt-name {
         background-color: white;
@@ -200,6 +212,7 @@ header.site-header {
             text-decoration: none;
             cursor: inherit;
         }
+
         position: fixed;
         transform-origin: top left;
         transform: rotate(90deg);

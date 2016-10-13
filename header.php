@@ -35,6 +35,8 @@
 				<canvas id="vis"></canvas>
 			</div>
 		</div>
+		<a class="listen-now-button btn btn-primary btn-lg btn-block" href="//ksdt.ucsd.edu/listen/stream.mp3" role="button">LISTEN LIVE</a>
+		<a class="listen-now-button btn btn-warning btn-lg btn-block" href="//tunein.com/radio/KSDT-s18746/" role="button">OR ON THE TUNEIN APP</a>
 
 		<nav class="navbar navbar-light bg-faded navbar-extend">
 			<div class="collapse navbar-toggleable-md" id="exCollapsingNavbar2">
@@ -51,17 +53,17 @@
 						</li>
                     <?php endforeach; ?>
 					<li class="nav-item nav-mobile-item">
-						<a class="nav-link" href="//tunein.com/radio/KSDT-s18746/">listen on tunein app</a>
+						<a class="nav-link" href="//tunein.com/radio/KSDT-s18746/">tunein</a>
 					</li>
 					<li class="nav-item nav-mobile-item">
-						<a class="nav-link" href="https://ksdt.ucsd.edu/listen/stream.mp3">listen in browser</a>
+						<a class="nav-link" href="https://ksdt.ucsd.edu/listen/stream.mp3">listen live</a>
 					</li>
 
 				</ul>
 		        <div class="player">
 					<i class="fa fa-play" aria-hidden="true"></i>
 					<span class="live-circle"></span>
-					<span class="listen">LIVE:</span>
+					<span class="listen">LIVE</span>
 					<div class="show-info">
 						<a href=""><span class="show-name"></span></a>
 						<span class="show-djs"></span>
