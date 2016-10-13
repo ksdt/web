@@ -23,6 +23,7 @@
 <?php wp_head(); ?>
 </head>
 
+
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<header id="masthead" class="site-header" role="banner">
@@ -58,7 +59,13 @@
 
 				</ul>
 		        <div class="player">
-		            <i class="fa fa-play" aria-hidden="true"></i>
+					<i class="fa fa-play" aria-hidden="true"></i>
+					<span class="live-circle"></span>
+					<span class="listen">LIVE:</span>
+					<div class="show-info">
+						<a href=""><span class="show-name"></span></a>
+						<span class="show-djs"></span>
+					</div>
 		        </div>
 			</div>
 			<button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2" aria-controls="exCollapsingNavbar2" aria-expanded="false" aria-label="Toggle navigation">

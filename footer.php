@@ -76,7 +76,6 @@
 	    timeout: 5000, //if longer than 5 seconds just give up
 	    /* on error function, TODO */
 	    error: function(event, request, settings){
-	        alert("Oops!");
 	        console.log(event, request, settings);
 	    }
 	});
@@ -147,8 +146,16 @@
 		if (url.charAt(0) == '/') {
 			sickAjaxRoutine(url, 'main.site-main', 'main.site-main', false);
 			e.preventDefault();
-			e.stopImmediatePropagation
+			e.stopImmediatePropagation();
 		}
+	});
+
+	$('header .player .show-info').on('click', 'a', function(e) {
+		var url = $(e.currentTarget).attr('href');
+		sickAjaxRoutine(url, 'main.site-main', 'main.site-main', false);
+		e.preventDefault();
+		e.stopImmediatePropagation();
+
 	});
 
     $('header.site-header').on('click', '.player i.fa-play', function(e) {
@@ -158,6 +165,34 @@
     $('header.site-header').on('click', '.player i.fa-pause', function(e) {
         AudioHandler.pause();
     });
+
+	function updateShowInfo() {
+		$.getJSON('./radio-data')
+			.done(function(data) {
+				if (data.success && !data.result) {
+					$('.player .show-name').text('Rotation');
+					$('.player .show-djs').text('rotation');
+					$('.player .show-name')
+						.parent().css('pointer-events', 'none')
+				} else {
+					$('.player .show-name').text(data.result.ShowName);
+					var djs =
+							data
+								.result
+								.ShowUsers
+								.map(function(x) { return x['DJName']; })
+								.join(' & ');
+					$('.player .show-djs').text(djs);
+					$('.player .show-name')
+						.parent().css('pointer-events', 'all')
+					$('.player .show-name')
+						.parent()
+						.attr('href', 'show/' + $('.player .show-name').text())
+				}
+
+			})
+	} updateShowInfo();
+	window.setInterval(updateShowInfo, 5000);
 
 	var egg = 0;
 	$('.egg img').click(function() {
