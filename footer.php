@@ -169,16 +169,16 @@
 	function updateShowInfo() {
 		$.getJSON('./radio-data')
 			.done(function(data) {
-				if (data.success && !data.result) {
+				if (data.success && !data.results) {
 					$('.player .show-name').text('Rotation');
 					$('.player .show-djs').text('rotation');
 					$('.player .show-name')
 						.parent().css('pointer-events', 'none')
 				} else {
-					$('.player .show-name').text(data.result.ShowName);
+					$('.player .show-name').text(data.results[0].ShowName);
 					var djs =
 							data
-								.result
+								.results[0]
 								.ShowUsers
 								.map(function(x) { return x['DJName']; })
 								.join(' & ');

@@ -14,16 +14,18 @@
 get_header(); ?>
 
     <?php
-        
+
         include(get_template_directory() . '/inc/SpinPapiConf.inc.php');
-    
-        $sp = new SpinPapiClient($mySpUserID, $mySpSecret, $myStation, true, $papiVersion);
-        $sp->fcInit(get_template_directory() . '/.fc');
-        
+
+        $sp = new SpinPapiClient($mySpUserID, $mySpSecret, 'ksdt', true, $papiVersion);
+        //$sp->fcInit(get_template_directory() . '/.fc');
+
         $shows = $sp->query(array(
             'method' => 'getRegularShowsInfo',
             'When' => 'all'
         ));
+        //echo '<pre>' . var_export($shows, true) . '</pre>';
+
         if ($shows && $shows['success']) {
             $shows = $shows['results'];
             //sort shows into day of week buckets
@@ -74,12 +76,15 @@ get_header(); ?>
         }
     ?>
 
+    <?php //echo '<pre>' . var_export($shows, true) . '</pre>'; ?>
+
+
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="container">
 				<article class="page programming">
-				    <?php //echo '<pre>' . var_export($shows, true) . '</pre>'; ?>
+				    <?php //echo '<pre>'; //echo wp_send_json($shows); echo '</pre>'?>
 				    <div class="entry-content">
 				        <div class="day-selection">
 				            <ul>
@@ -94,7 +99,7 @@ get_header(); ?>
 				        </div>
 				        <?php foreach ($shows as $day => $showsDay): ?>
     				        <table class="day <?php echo $day; if ($day == date('D')) echo ' selected'; ?> table">
-				            <?php foreach($showsDay as $show): ?>
+                            <?php foreach($showsDay as &$show): ?>
     				            <tr>
     				                <td class="time"><?php echo $show['OnairTime']; ?><span class="ampm"><?php echo $show['OnairTimeAMPM']; ?></span></td>
     				                <td class="show-td">
