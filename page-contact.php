@@ -65,14 +65,14 @@ get_header(); ?>
                             	            <td><span>Engineer</span><span>engineer@ksdt.org</span></td>
                             	            <td>
 												<span>Caleb Hess, Sanjay John</span>
-												<span>Friday 1pm-3pm | ?</span>
+												<span>Friday 1pm-3pm | Monday 2pm-4pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Technology</span><span>webmaster@ksdt.org</span></td>
                             	            <td>
 												<span>Raymond Arevalo</span>
-												<span>?</span>
+												<span>Wednesday 1pm-3pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
