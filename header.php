@@ -20,6 +20,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.3/css/fluidbox.min.css" integrity="sha256-LtmxIjp0kTPsfOD7AYymAwy2CRw4bwU403I7IT+SCkU=" crossorigin="anonymous" />
 
+<link rel="icon"
+      type="image/gif"
+      href="https://ksdt.ucsd.edu/wp-content/themes/xx/van.gif">
+
+	  <meta property="og:title"              content="KSDT | UC San Diego College Radio" />
+	  <meta property="og:description"        content="KSDT is a free-form, eclectic, student run radio station located on the campus of the University of California, San Diego" />
+	  <meta property="og:image"              content="https://ksdt.ucsd.edu/wp-content/themes/xx/van.png" />
+<meta name="Description" CONTENT="KSDT is a free-form, eclectic, student run radio station located on the campus of the University of California, San Diego">
 <?php wp_head(); ?>
 </head>
 
