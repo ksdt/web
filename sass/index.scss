@@ -736,6 +736,14 @@ article.page.contact {
                     display: block;
                 }
             }
+            &:nth-child(2) {
+                > span:nth-child(2) {
+                    cursor: default;
+                    text-align: left;
+                    display: block;
+                    font-size: 0.6rem;
+                }
+            }
 
         }
     }
