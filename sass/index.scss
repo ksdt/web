@@ -11,15 +11,31 @@ $deafult-text-size: 1em;
 $default-weight: 200;
 
 
-
-/* added by raymond */
-.container-extended {
-    max-width: none;
-    padding: 0;
-    margin: 0;
-    padding-left: 5rem;
+div.index {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5rem;
+    padding-left: 2rem;
+    div.row {
+        margin-bottom: 3rem;
+    }
+    p.mission {
+         @import url('https://fonts.googleapis.com/css?family=Judson');
+         font-family: 'Judson', serif;
+         line-height: 1.2;
+         font-size: 3rem;
+         margin-bottom: 0.3rem;
+    }
+    .hero-video {
+        height: 399px;
+        width: 100%;
+    }
+    img.poster {
+        width: 49%;
+    }
     @media screen and (max-width: $SM) {
-        padding: 0;
+        padding-left: 0;
     }
 }
 
@@ -252,12 +268,10 @@ ul.index-post-list {
     }
     list-style: none;
     margin: 0;
-    margin-left: auto;
-    max-width: 400px;
     padding: 0;
     font-family: $fontmono;
-
-    border-right: 1px solid #d9d9d9;
+    max-height: 500px;
+    overflow: scroll;
 
     a.index-post-link {
         &:hover {

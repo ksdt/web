@@ -29,6 +29,7 @@
 <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.3/js/jquery.fluidbox.min.js" integrity="sha256-GT/cwCQ+2t1r4qUpW3eSXcQr1N2Shq/TVCrAzWaSgOY=" crossorigin="anonymous"></script>
 <script src="https://use.fontawesome.com/d391844db3.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 <script src="<?php echo get_template_directory_uri() . '/js/'; ?>audio.js"></script>
 <script>
 	/* http://v4-alpha.getbootstrap.com/ */
@@ -69,6 +70,15 @@
 		sickAjaxRoutine(e.state.url, e.state.subset, e.state.destinationSelector, e.state.replace);
 
 		e.preventDefault();
+	});
+
+	/* index slider */
+	$(document).ready(function(){
+		$('.slick-slider').slick({
+			dots: true,
+			slidesToShow: 1,
+			arrows: false
+		});
 	});
 
 	/* global ajax settings */

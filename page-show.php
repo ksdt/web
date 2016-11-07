@@ -19,17 +19,17 @@ get_header(); ?>
     permalink              rewrite rule
     /shows/Burger Town  -> show/?showName=Burger Town
     /shows/rtfm         -> show/?showName=rtfm
-    
+
     spinpapi api: https://spinitron.com/user-guide/pdf/SpinPapi-v2.pdf
     */
-    
+
     include(get_template_directory() . '/inc/SpinPapiConf.inc.php');
 
     $sp = new SpinPapiClient($mySpUserID, $mySpSecret, $myStation, true, $papiVersion);
     $sp->fcInit(get_template_directory() . '/.fc');
-    
+
     $showName = get_query_var('showName');
-    
+
     if ($showName) { /* if showName exists and isn't blank */
         /* get all shows from spinitron */
         $shows = $sp->query(array(
@@ -40,7 +40,7 @@ get_header(); ?>
         if ($shows['success'] && $shows['results']) {
             $shows = $shows['results']; /* set $shows to the results */
             $show = ''; /* placeholder for our matched show */
-            
+
             /* search for show by show name */
             $showMatch = 0; /* similar_text returns a higher int if match is closer */
             foreach ($shows as $s) {
@@ -49,7 +49,7 @@ get_header(); ?>
                     $showMatch = similar_text(strtolower($s['ShowName']), strtolower($showName));
                 }
             }
-            
+
             /* grab all playlists for matched show */
             $playlistsQ = $sp->query(array(
                 'method' => 'getPlaylistsInfo',
@@ -79,7 +79,7 @@ get_header(); ?>
         status_header( 404 );
         get_template_part( 404 ); exit();
     }
-    
+
     function get_times($show) {
         $weekday = DateTime::CreateFromFormat('D', $show['Weekdays'][0]);
         $start = DateTime::CreateFromFormat('G:i:s', $show['OnairTime']);
@@ -103,7 +103,7 @@ get_header(); ?>
     function get_random_shows($shows) {
         return array_rand($shows, 10);
     }
-   
+
 ?>
 
 
@@ -124,7 +124,7 @@ get_header(); ?>
 				                <div class="col-lg-6 col-md-12 other-info">
 				                    <?php if ($firstPlaylist): ?>
 				                        <h2>Most Recent Playlist</h2>
-				                        <span class="playlist-date"><?php echo human_time_diff(strtotime($allPlaylists[0]['PlaylistDate']), current_time('timestamp')) . ' ago'; ?></span>
+				                        <span class="playlist-date"><?php echo human_time_diff(strtotime($allPlaylists[0]['PlaylistDate']), get_the_time('U', true)) . ' ago'; ?></span>
 				                        <ul class="songs">
 				                            <?php foreach ($firstPlaylist as $song): ?>
 				                                <li>
