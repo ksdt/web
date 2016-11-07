@@ -24,7 +24,7 @@ get_header(); ?>
 								free form<br> student radio<br> at UC San Diego.
 							</p>
 							<p class="about">
-								Since 1967, KSDT radio has existed to serve students and the greater San Diego community. Broadcasting over the internet 24/7, KSDT DJs curate an eclectic sound, featuring underrepresented genres and emerging artists. KSDT regularly organizes live performances, and provides a fully equipped recording and podcasting studio free of charge to students.
+								Since 1967, KSDT Radio has existed to serve students and the greater San Diego community. Broadcasting over the internet 24/7, KSDT DJs curate an eclectic sound, featuring underrepresented genres and emerging artists. KSDT regularly organizes live performances, and provides a fully equipped recording and podcasting studio free of charge to students.
 							</p>
 						</div>
 						<div class="col-lg-8">
