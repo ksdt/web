@@ -75,7 +75,7 @@ get_header(); ?>
 													<h1><?php the_title(); ?></h1>
 													<div class="meta">
 														<span class="category"><?php echo get_the_category()[0]->slug; ?></span>
-														<span class="date"><?php echo human_time_diff(get_the_time('U', true)) . ' ago'; ?></span>
+														<span class="date"><?php echo human_time_diff(get_the_time('U')) . ' ago'; ?></span>
 													</div>
 													<p class="snippet">
 														<?php the_excerpt(); ?>
