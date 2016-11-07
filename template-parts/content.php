@@ -14,15 +14,16 @@
 		<?php
 		if ( is_single() && has_post_thumbnail() ) :
 			?>
-			<div class="featured-lead" style="background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(<?php the_post_thumbnail_url('full'); ?>)">
-				<div class="meta">
-					<h1 class="entry-title"><?php the_title(); ?></h1>
-					<span><?php the_date('l, F jS Y'); ?></span>
-				</div>
+
+			<div class="featured-lead" style="background-image: url(<?php the_post_thumbnail_url('full'); ?>);"></div>
+			<div class="meta" style="margin-top: -10px;">
+				<h1 class="entry-title" style = "color: #404040; font-size: 2.3rem; font-weight: 100; margin-bottom: -11px;"><?php the_title(); ?></h1>
+				<span style="color: #404040; font-weight: 100; font-size: 1.2rem"><?php the_date('l, F jS Y'); ?></span>
 			</div>
 		<?php
 		elseif (is_single()):
 			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_date('l, F jS Y');
 		else:
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
@@ -41,7 +42,7 @@
 		<script>
 			if ( typeof window.instgrm !== 'undefined' ) {
 			    window.instgrm.Embeds.process();
-			}	
+			}
 		</script>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
