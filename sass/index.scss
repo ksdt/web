@@ -770,7 +770,7 @@ article.page.contact {
         font-family: $fontserious;
         tr > td {
             border: none;
-            font-size: 0.8rem;
+            font-size: 0.9rem;
             vertical-align: text-bottom;
             &:nth-child(1) {
                 cursor: default;
@@ -778,7 +778,7 @@ article.page.contact {
                 font-size: 1.2rem;
                 > span:nth-child(2) {
                     cursor: text;
-                    font-size: 0.6rem;
+                    font-size: 0.8rem;
                     display: block;
                 }
             }
@@ -787,7 +787,7 @@ article.page.contact {
                     cursor: default;
                     text-align: left;
                     display: block;
-                    font-size: 0.6rem;
+                    font-size: 0.8rem;
                 }
             }
 
