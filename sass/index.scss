@@ -532,8 +532,8 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
             margin-left: auto !important;
             margin-right: auto !important;
         }
-        figure {
-            width: 60%;
+        figure.wp-caption {
+            width: 60% !important;
             margin-left: 15rem;
             @media screen and (max-width: $SM) {
                 width: 100% !important;
