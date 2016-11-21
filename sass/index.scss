@@ -467,7 +467,12 @@ ul.index-post-list {
     stroke-width: 0.5px;
 }
 
-
+.gallery {
+    .gallery-caption {
+        font-size: 0.7rem;
+        opacity: 0.6;
+    }
+}
 
 
 /* BEGIN PAGE/POST SHARED STYLES */
