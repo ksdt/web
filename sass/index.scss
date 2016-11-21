@@ -467,6 +467,13 @@ ul.index-post-list {
     stroke-width: 0.5px;
 }
 
+article.page.programming {
+    p {
+        margin: 0;
+        font-family: inherit;
+    }
+}
+
 
 /* BEGIN PAGE/POST SHARED STYLES */
 article.page, article.post, article.albumreviews, article.concertreviews, article.weeklypicks, article.event {
