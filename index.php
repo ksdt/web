@@ -139,7 +139,7 @@ get_header(); ?>
 						</div>
 						<div class="col-lg-7">
 							<?php
-							$post = get_post(1046);
+							$post = get_post(1095);
 							$content = apply_filters('the_content', $post->post_content);
 							echo $content;
 							?>
