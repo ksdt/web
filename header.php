@@ -12,26 +12,27 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
 
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.3/css/fluidbox.min.css" integrity="sha256-LtmxIjp0kTPsfOD7AYymAwy2CRw4bwU403I7IT+SCkU=" crossorigin="anonymous" />
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
-<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.3/css/bootstrap.min.css" integrity="sha384-MIwDKRSSImVFAZCVLtU0LMDdON6KVCrZHyVQQj6e8wIEJkW4tvwqXrbMIya1vriY" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
 
 
-<link rel="icon"
-      type="image/gif"
-      href="https://ksdt.ucsd.edu/wp-content/themes/xx/van.gif">
+    <link rel="icon"
+          type="image/gif"
+          href="https://ksdt.ucsd.edu/wp-content/themes/xx/van.gif">
 
-	  <meta property="og:title"              content="KSDT | UC San Diego College Radio" />
-	  <meta property="og:description"        content="KSDT is a free-form, eclectic, student run radio station located on the campus of the University of California, San Diego" />
-	  <meta property="og:image"              content="https://ksdt.ucsd.edu/wp-content/themes/xx/van.png" />
-<meta name="Description" CONTENT="KSDT is a free-form, eclectic, student run radio station located on the campus of the University of California, San Diego">
-<?php wp_head(); ?>
+    <meta property="og:title"              content="KSDT | UC San Diego College Radio" />
+    <meta property="og:description"        content="KSDT is a free-form, eclectic, student run radio station located on the campus of the University of California, San Diego" />
+    <meta property="og:image"              content="https://ksdt.ucsd.edu/wp-content/themes/xx/van.png" />
+    <meta name="Description" CONTENT="KSDT is a free-form, eclectic, student run radio station located on the campus of the University of California, San Diego">
+
+    <?php wp_head(); ?>
 </head>
 
 

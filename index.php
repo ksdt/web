@@ -21,7 +21,7 @@ get_header(); ?>
 					<div class="row">
 						<div class="col-lg-4">
 							<p class="mission">
-								free-form<br> college radio<br> at UC San Diego.
+								free-form<br> college radio<br> at UC San Diego
 							</p>
 							<p class="about">
 								Since 1967, KSDT radio has existed to serve students and the greater San Diego community. Broadcasting over the internet 24/7, KSDT DJs curate an eclectic sound, featuring underrepresented genres and emerging artists. KSDT regularly organizes live performances, and provides a fully equipped recording and podcasting studio free of charge to students.
@@ -61,6 +61,12 @@ get_header(); ?>
 
 									$featuredQuery = [
 										'category_name' => 'featured',
+										'post_type' => array(
+											'post',
+											'weeklypicks',
+											'concertreviews',
+											'albumreviews'
+										),
 										'posts_per_page' => 1
 									];
 
@@ -90,7 +96,13 @@ get_header(); ?>
 									wp_reset_postdata();
 
 									$regularQuery = [
-										'posts_per_page' => 10
+										'posts_per_page' => 10,
+										'post_type' => array(
+											'post',
+											'weeklypicks',
+											'concertreviews',
+											'albumreviews'
+										)
 									];
 
 									$query = new WP_Query( $regularQuery );
@@ -105,10 +117,12 @@ get_header(); ?>
 													<li class="index-post-entry">
 														<article class="index-post" data-url="<?php the_permalink(); ?>">
 															<h1><?php the_title(); ?></h1>
+															<?php if ( get_the_category() && get_the_time() ): ?>
 															<div class="meta">
 																<span class="category"><?php echo get_the_category()[0]->slug; ?></span>
 																<span class="date"><?php echo human_time_diff(get_the_time('U')) . ' ago'; ?></span>
 															</div>
+															<?php endif; ?>
 															<p class="snippet">
 																<?php the_excerpt(); ?>
 															</p>
@@ -124,12 +138,11 @@ get_header(); ?>
 							</ul>
 						</div>
 						<div class="col-lg-7">
-							<a href="https://www.facebook.com/events/180379865743803/">
-								<img class="poster" src="https://ksdt.ucsd.edu/wp-content/uploads/2016/11/14615661_10154213208193264_6854662183800466507_o.jpg" alt="">
-							</a>
-							<a href="https://www.facebook.com/events/784703248334388/">
-								<img class="poster" src="https://ksdt.ucsd.edu/wp-content/uploads/2016/11/the_most_suggestive_sounding_festival.png" alt="">
-							</a>
+							<?php
+							$post = get_post(1046);
+							$content = apply_filters('the_content', $post->post_content);
+							echo $content;
+							?>
 						</div>
 					</div>
 				</div>
