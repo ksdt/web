@@ -467,12 +467,7 @@ ul.index-post-list {
     stroke-width: 0.5px;
 }
 
-article.page.programming {
-    p {
-        margin: 0;
-        font-family: inherit;
-    }
-}
+
 
 
 /* BEGIN PAGE/POST SHARED STYLES */
@@ -674,6 +669,11 @@ article.page.show, article.page.playlist {
 
 article.page.programming {
     display: block;
+    p {
+        margin: 0;
+        margin-left: 0;
+        font-family: inherit;
+    }
     .day-selection ul {
         display: flex;
         justify-content: space-between;
