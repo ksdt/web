@@ -467,16 +467,7 @@ ul.index-post-list {
     stroke-width: 0.5px;
 }
 
-.gallery {
-    .gallery-caption {
-        font-size: 0.7rem;
-        opacity: 0.6;
-    }
-    figure.gallery-item {
-        margin-left: 0;
-        width: inherit;
-    }
-}
+
 
 
 /* BEGIN PAGE/POST SHARED STYLES */
@@ -542,7 +533,7 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
             margin-right: auto !important;
         }
         figure {
-            width: 60% !important;
+            width: 60%;
             margin-left: 15rem;
             @media screen and (max-width: $SM) {
                 width: 100% !important;
@@ -598,6 +589,17 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
         margin-top: 0.5rem !important;
     }
 
+}
+
+div.gallery {
+    .gallery-caption {
+        font-size: 0.7rem;
+        opacity: 0.6;
+    }
+    figure.gallery-item {
+        margin-left: 0;
+        width: inherit;
+    }
 }
 
 /* JUSTIFY AND CENTER PAGE CONTENT */
