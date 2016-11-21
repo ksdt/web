@@ -669,7 +669,7 @@ article.page.show, article.page.playlist {
 
 article.page.programming {
     display: block;
-    p {
+    .show > p.description {
         margin: 0;
         margin-left: 0;
         font-family: inherit;
