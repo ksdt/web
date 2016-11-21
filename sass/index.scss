@@ -266,6 +266,20 @@ header.site-header {
     }
 }
 
+.site-footer {
+    width: 100%;
+    opacity: 0.6;
+    font-size: 10px;
+    p {
+        @media screen and (max-width: $SM) {
+            padding: 0.5rem;
+        }
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+    }
+}
+
 ul.index-post-list {
     @media screen and (max-width: $SM) {
         border: none;

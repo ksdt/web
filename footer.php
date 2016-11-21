@@ -18,6 +18,15 @@
 	</div>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="row">
+			<div class="col-lg-4 offset-lg-2">
+				<p>The views presented on this website via images, posts, and the radio broadcast are not necessarily those of The University of California Regents, The Associated Students of the University of California San Diego, or KSDT Radio.</p>
+			</div>
+			<div class="col-lg-4">
+				<p>The source code for this website is available at <a href="https://github.com/ksdt/web">https://github.com/ksdt/web</a>.</p>
+				<p>All original content unless otherwise noted is copyright <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY-SA 4.0</a>.</p>
+			</div>
+		</div>
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
