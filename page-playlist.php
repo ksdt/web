@@ -15,10 +15,10 @@
 get_header(); ?>
 
 <?php
-/* 
+/*
     permalink         rewrite
     playlist/41142 => playlist/?playlist=42141
-    
+
 */
     include(get_template_directory() . '/inc/SpinPapiConf.inc.php');
 
@@ -75,27 +75,23 @@ get_header(); ?>
 			                        <span class="title"><a class="cya-styles" href="/show/<?php echo $playlist['ShowName']; ?>"><?php echo $playlist['ShowName']; ?></a></span>
 			                        <span class="playlist-date">Playlist on <?php echo $playlist['PlaylistDate']; ?></span>
 				                    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/plyr.css'; ?>" type="text/css" />
-				                    <?php if (strtotime($playlist['PlaylistDate']) > strtotime('-2 weeks')): ?>
-    				                    <audio controls src="<?php echo 'https://f001.backblazeb2.com/file/ksdt-archive/' . str_replace(' ', '+', $playlist['ShowName']) . '+' . $playlist['PlaylistDate'] . '.mp3' ?>">
-                                            Your browser does not support the <code>audio</code> element.
-                                        </audio>
-                                        <script src="<?php echo get_template_directory_uri() . '/js/plyr.js'; ?>"></script>
-    				                    <script>
-    				                       var $ = $ ? $ : jQuery;
-    				                       var audios = plyr.setup({
-    				                           controls: ['play', 'current-time', 'mute', 'volume']
-    				                       });
-    				                       audios.forEach(function (audio) {
-    				                           audio.on('error', function(e) {
-    				                               console.log(e);
-    				                               audio.destroy();
-    				                               $('audio').replaceWith('Error retrieving show.');
-    				                           });
-    				                       });
-    				                    </script>
-    				                <?php else: ?>
-    				                    <p>Shows older than 2 weeks old cannot be listened to online.</p>
-    				                <?php endif; ?>
+				                    <audio controls src="<?php echo 'https://f001.backblazeb2.com/file/ksdt-archive/' . str_replace(' ', '+', $playlist['ShowName']) . '+' . $playlist['PlaylistDate'] . '.mp3' ?>">
+                                        Your browser does not support the <code>audio</code> element.
+                                    </audio>
+                                    <script src="<?php echo get_template_directory_uri() . '/js/plyr.js'; ?>"></script>
+				                    <script>
+				                       var $ = $ ? $ : jQuery;
+				                       var audios = plyr.setup({
+				                           controls: ['play', 'current-time', 'mute', 'volume']
+				                       });
+				                       audios.forEach(function (audio) {
+				                           audio.on('error', function(e) {
+				                               console.log(e);
+				                               audio.destroy();
+				                               $('audio').replaceWith('Error retrieving show.');
+				                           });
+				                       });
+				                    </script>
 				                </div>
 				                <div class="col-lg-6 col-md-12 other-info">
 				                    <ul class="songs">
