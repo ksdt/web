@@ -18,7 +18,7 @@ get_header(); ?>
         include(get_template_directory() . '/inc/SpinPapiConf.inc.php');
 
         $sp = new SpinPapiClient($mySpUserID, $mySpSecret, 'ksdt', true, $papiVersion);
-        //$sp->fcInit(get_template_directory() . '/.fc');
+        $sp->fcInit(get_template_directory() . '/.fc');
 
         $shows = $sp->query(array(
             'method' => 'getRegularShowsInfo',
