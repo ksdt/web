@@ -100,6 +100,7 @@ get_header(); ?>
 				        <?php foreach ($shows as $day => $showsDay): ?>
     				        <table class="day <?php echo $day; if ($day == date('D')) echo ' selected'; ?> table">
                             <?php foreach($showsDay as &$show): ?>
+                                <?php if (!$show) continue; /* if show obj is bad, just skip. */ ?>
     				            <tr>
     				                <td class="time"><?php echo $show['OnairTime']; ?><span class="ampm"><?php echo $show['OnairTimeAMPM']; ?></span></td>
     				                <td class="show-td">
