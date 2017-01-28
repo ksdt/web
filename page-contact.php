@@ -96,6 +96,10 @@ La Jolla, CA. 92093-0315</pre>
 
                 	        </div>
     				    </div>
+						<div class="row">
+							<h1>MUSIC BOOKINGS </h1>: bookings@ksdt.org<br>
+							<h1>MUSIC SUBMISSIONS </h1>: submissions@ksdt.org<br>
+						</div>
                 	</div><!-- .entry-content -->
                 </article><!-- #post-## -->
 			</div>
