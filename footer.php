@@ -325,7 +325,7 @@
 
     var AudioHandler = {
         _isPlaying: false,
-        _audioSource: 'https://ksdt.ucsd.edu/listen/stream.mp3',
+        _audioSource: 'https://ksdt.ucsd.edu/stream.mp3',
         _audio: null,
         _draw: null,
         _elem: $('div.player'),
