@@ -54,8 +54,9 @@ require_once dirname(__FILE__) . '/SpinPapiClient.inc.php';
 date_default_timezone_set('America/Los_Angeles');
 
 // Change these three
-$mySpUserID  = PAPI_USER;
-$mySpSecret  = PAPI_SECRET;
+/* TODO change this shit */
+$mySpUserID  = 'fcc90be687eed27e';
+$mySpSecret  = 'db1bf4499336fb67';
 $myStation   = 'ksdt';
 
 // To use a file cache, uncomment and set to the cache directory's path

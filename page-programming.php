@@ -34,6 +34,7 @@ get_header(); ?>
             }
             $shows = array(
                 'Sun' => array_filter($shows, function($e) {
+                    // Checks if the sunday value exists in the array
                     return in_array('Sun', $e['Weekdays']);
                 }),
                 'Mon' => array_filter($shows, function($e) {
