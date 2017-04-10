@@ -93,7 +93,7 @@ get_header(); ?>
 
 					<!-- Right Side -->
 					<div class = "col-lg-3 col-md-12 col-sm-12 right-side">
-
+						<?php date_default_timezone_set('America/Los_Angeles'); ?>
 						<div class="module-title">
 							<span class="post-featured"> <?php echo date('l');?>'s Schedule </span>
 							<div class="post-line" style=""></div>
