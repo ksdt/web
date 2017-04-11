@@ -20,7 +20,6 @@ get_header(); ?>
 			<div class="index">
 
 				<!-- New row -->
-
 				<div class ="row row-slider-show-schedule" style="">
 					<!--- Left Side -->
 					<div class ="col-lg-9 col-md-12 col-sm-12 left-side" style ="z-index: 1;">
