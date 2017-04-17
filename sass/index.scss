@@ -967,9 +967,15 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
     }
   }
 
+
+
   div.sharedaddy, div.jp-relatedposts {
-    max-width: 450px;
+    max-width: 700px;
     margin: auto !important;
+  }
+
+  div.sharedaddy {
+    margin-top: 80px !important;
   }
 
   // instagram embedded images
