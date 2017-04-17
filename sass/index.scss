@@ -865,13 +865,24 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
 
   header.entry-header {
     font-size: 1.125rem;
-    font-weight: bold;
+    color: #f0ad4e;
     line-height: 2.1;
     font-family: 'Judson';
     .meta {
       .entry-title {
+        color: #323232;
         margin-bottom: 0rem;
         max-width: 700px;
+
+        font-weight: bold;
+      }
+      img.entry-image {
+        width: 50vw;
+        @media (max-width: 991px) {
+          margin: auto;
+          text-align: center;
+          width: 97%;
+        }
       }
       text-align: left;
       margin-left: 15rem;
@@ -886,7 +897,8 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
     width: 100%;
   }
   div.entry-content {
-    font-size: 75%;
+
+
     p {
       //hack to avoid min width being hit by float
       &:before {
@@ -895,13 +907,12 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
         display: block;
         overflow: hidden;
       }
-      max-width: 450px;
       font-size: 1.125rem;
 
       line-height: 1.3;
       letter-spacing: -.003em;
       padding: 0 0.3rem 0 0.3rem;
-      max-width: 400px;
+      max-width: 700px;
 
       font-family: 'Judson';
 

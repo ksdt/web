@@ -17,12 +17,15 @@
 			<h1 class="entry-title"><?php the_title(); ?></h1>
 			<span class="entry-date"><?php the_date('l, F jS Y'); ?></span>
 			| by <span class="entry-author"><?php the_author(); ?></span>
+			<br>
+						<img class="entry-image" src="<?php if (has_post_thumbnail()) echo the_post_thumbnail_url() ?>">
 		</div>
 
 
 	</header><!-- .entry-header -->
 
-	<div class="entry-content" style = " margin: auto; margin-top: 30px;">
+
+	<div class="entry-content" style = "">
 		<?php
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
