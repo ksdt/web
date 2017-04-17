@@ -972,6 +972,10 @@ article.page, article.post, article.albumreviews, article.concertreviews, articl
   div.sharedaddy, div.jp-relatedposts {
     max-width: 700px;
     margin: auto !important;
+    @media (max-width: 575px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
   div.sharedaddy {
