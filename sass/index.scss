@@ -220,6 +220,9 @@ header.site-header {
       a {
         color: #404040;
         line-height: 65px;
+        &:hover {
+          color: #f0ad4e;
+        }
         @media (max-width: 991px) {
           line-height: 25px;
         }
@@ -254,15 +257,53 @@ header.site-header {
     width: 100%;
   }
   .listen-now-button {
+    text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 80%;
     color: white;
-    font-family: 'Verdana';
+    //font-family: 'Verdana';
+    font-family: 'Judson', Verdana, sans-serif;
     display: none;
     margin-top: 1rem;
     @media screen and (max-width: $SM) {
       display: block;
+    }
+  }
+
+  .ksdt-mobile {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    color: #404040;
+    font-family: 'Judson', Verdana, sans-serif;
+    font-size: 2.75rem !important;
+    a {
+      font-size: 2.75rem !important;
+      &:hover {
+        color: #f0ad4e; 
+      }
+    }
+    display: none;
+    margin-top: 1rem;
+    @media screen and (max-width: $SM) {
+      display: block;
+    }
+  }
+
+  .listen-mobile {
+        width: 20%;
+    text-align: left;
+    margin-left: 10%;
+    display: none;
+    margin-top: -3rem;
+    @media screen and (max-width: $SM) {
+      display: block;
+    }
+
+    img {
+      height: 2rem;
     }
   }
 
@@ -1217,6 +1258,28 @@ article.page.contact {
         }
       }
 
+    }
+  }
+}
+
+article.page.faq {
+  .entry-content {
+    font-family: 'Judson', Verdana, sans-serif;
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-header{
+      //background-color: #404040;
+      background-color: white;
+    }
+    a {
+      //color: #f0ad4e;
+      color: #404040;
+      &:hover {
+        color: #f0ad4e;
+      }
+      //#404040
+      //#2B2B2B
     }
   }
 }

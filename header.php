@@ -44,10 +44,14 @@
 
 
 
-
+      <a class="ksdt-mobile" >ksdt</a>
+      <a class="listen-mobile" target="_blank" href="//ksdt.ucsd.edu/listen/stream.mp3">
+        <img class="image" src="<?php echo get_template_directory_uri() . '/headphones.png'; ?>">
+      </a>
+      <!--
       <a class="listen-now-button btn btn-primary btn-lg btn-block" href="//ksdt.ucsd.edu/listen/stream.mp3" role="button">LISTEN LIVE</a>
       <a class="listen-now-button btn btn-warning btn-lg btn-block" href="//tunein.com/radio/KSDT-s18746/" role="button">OR ON THE TUNEIN APP</a>
-
+    -->
       <nav class="navbar navbar-light bg-faded navbar-extend">
         <div class="collapse navbar-toggleable-md" id="exCollapsingNavbar2">
 
@@ -85,6 +89,8 @@
             </li>
 
           </ul>
+
+
           <div class="player">
             <i class="fa fa-play" aria-hidden="true"></i>
             <span class="live-circle"></span>

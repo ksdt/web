@@ -28,6 +28,9 @@
 						<a class="footer-links" href="/contact"> Contact</a>
 					</li>
 					<li>
+						<a class="footer-links" href="/faq"> FAQ </a>
+					</li>
+					<li>
 						<a class="footer-links" target="_blank" href="https://github.com/ksdt"> Github</a>
 					</li>
 				</ul>
