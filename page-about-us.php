@@ -20,11 +20,11 @@ get_header(); ?>
 				<article class="page contact">
 				    <div class="entry-content">
     				    <div class="row">
-                            <?php echo do_shortcode('[caption id="attachment_921" align="aligncenter" width="700"]<img class="wp-image-921" src="https://ksdt.ucsd.edu/wp-content/uploads/2015/01/13321659_10206354244035519_223503744874314981_n.jpg" width="700" height="394" /> 2016-2017 Staff[/caption]'); ?>
+                            <?php echo do_shortcode('[caption id="attachment_921" align="aligncenter" width="700"]<img class="wp-image-921" src="https://ksdt.ucsd.edu/wp-content/uploads/2015/01/18193100_10208828185282504_8597061108762774029_o.jpg" width="700" height="394" /> 2016-2017 Staff[/caption]'); ?>
                             <div class="row">
                                 <div class="col-lg-4 offset-lg-2" style="margin-top:30px;">
                                     <span style="text-decoration: underline;"><strong>Meetings</strong></span><br>
-                                    <em>General Body Meeting: </em>4PM - 5PM on Fridays<br>
+                                    <em>General Body Meeting: </em>5PM - 6PM on Wednesdays<br>
 
                                     GBMs are open to all members and non-members, and will mainly be updates about the station and upcoming events. It’s the perfect meeting to come to if you are looking to get involved further with the station, or just want to keep up with the latest news.
 
