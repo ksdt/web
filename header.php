@@ -102,9 +102,7 @@
       </div>
 
       <!-- mobile navbar -->
-      <div class="mobile-navbar">
-        <a> Blah </a>
-      </div>
+
 
 
       <!-- mobile button -->
