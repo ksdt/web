@@ -262,7 +262,11 @@ get_header(); ?>
 					<?php if (get_the_time() ): ?>
 						<div class="col-lg-4 col-image">
 							<div class="post-image">
-								<img class = "card-img-top image-extended" src = "<?php the_post_thumbnail_url() ?>" >
+								<?php if(has_post_thumbnail()): ?>
+									<img class = "card-img-top image-extended" src = "<?php the_post_thumbnail_url() ?>" >
+								<?php else: ?>
+									<img class = "card-img-top image-extended" src="<?php echo get_template_directory_uri() . '/ksdt.png'; ?>">
+								<?php endif; ?>
 							</div>
 						</div>
 						<div class="col-lg-8 post-text">
