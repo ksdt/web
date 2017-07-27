@@ -54,7 +54,11 @@ get_header(); ?>
 
 											<div class ="col-lg-5 col-md-5 col-sm-5 post-image">
 												<div>
-													<img src="<?php the_post_thumbnail_url() ?>">
+													<?php if(has_post_thumbnail()): ?>
+														<img class = "card-img-top image-extended" src = "<?php the_post_thumbnail_url() ?>" >
+													<?php else: ?>
+														<img class = "card-img-top image-extended" src="<?php echo get_template_directory_uri() . '/ksdt.png'; ?>">
+													<?php endif; ?>													
 												</div>
 											</div>
 

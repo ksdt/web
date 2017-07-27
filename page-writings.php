@@ -51,7 +51,11 @@ get_header(); ?>
 				                <div class = "col-lg-3 col-md-6 col-sm-6 col-xs-12 col-extended" href = "<?php the_permalink(); ?>">
 									<div class = "card">
 										<div class = "image-div">
-											<img class = " image-extended" src = "<?php the_post_thumbnail_url() ?>" alt = "Card image cap">
+											<?php if(has_post_thumbnail()): ?>
+												<img class = "card-img-top image-extended" src = "<?php the_post_thumbnail_url() ?>" >
+											<?php else: ?>
+												<img class = "card-img-top image-extended" src="<?php echo get_template_directory_uri() . '/ksdt.png'; ?>">
+											<?php endif; ?>
 										</div>
 										<div class = "card-block card-block-extended">
 											<span class = "card-title card-title-extended"><?php the_title() ?></span>
