@@ -29,57 +29,57 @@ get_header(); ?>
                                                 <span>gm@ksdt.org</span>
                                             </td>
                             	            <td>
-												<span>Susan Bystrom, Tennyson Holloway</span>
-												<span>Friday 9am-10am, 11am-12pm | Thursday 1pm-3pm</span>
+												<span>Tennyson Holloway, Patty Cuen </span>
+												<span>Wednesday 6pm-7pm, or by appt. | Monday, Wednesday 2pm-3pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Music Director</span><span>music@ksdt.org</span></td>
                             	            <td>
-												<span>Patty Cuen, Emmet Webster</span>
-												<span>Wednesday 3pm-4pm, Friday 3pm-4pm | Friday 4pm-6pm</span>
+												<span>Ray Stachowiak</span>
+												<span>Thursday 11am-pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Promotions</span><span>promotions@ksdt.org</span></td>
                             	            <td>
 												<span>Karen Liou</span>
-												<span>Tuesday 11am-1pm</span>
+												<span>Tuesday, Thursday 4pm-5pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Programming</span><span>programming@ksdt.org</span></td>
                             	            <td>
-												<span>Anser Abbas, Brandon Slater</span>
-												<span>Tuesday 2pm-3pm, Thursday 2pm-3pm</span>
+												<span>Anser Abbas</span>
+												<span>Tuesday, Thursday 5pm-6pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Graphics</span><span>graphics@ksdt.org</span></td>
                             	            <td>
-												<span>Nariman Piri</span>
-												<span>Monday 4pm-5pm, Wednesday 4pm-5pm, Friday 4pm-5pm</span>
+												<span>Tzinti Medina</span>
+												<span>Monday 12:30pm-2:30pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Engineer</span><span>engineer@ksdt.org</span></td>
                             	            <td>
-												<span>Caleb Hess, Sanjay John</span>
-												<span>Friday 1pm-3pm | Monday 2pm-4pm</span>
+												<span>Caleb Hess, Adam Abadilla</span>
+												<span>Friday 3pm-5pm | Friday 12pm-2pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Technology</span><span>webmaster@ksdt.org</span></td>
                             	            <td>
-												<span>Raymond Arevalo</span>
-												<span>Wednesday 1pm-3pm</span>
+												<span>Bijan Farahani</span>
+												<span>Thursday 1pm-3pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
                             	            <td><span>Secretary</span><span>secretary@ksdt.org</span></td>
                             	            <td>
-												<span>Zachary Neumann</span>
-												<span>Monday 2pm-4pm</span>
+												<span>Natalia Cameroni</span>
+												<span>Thursday 3:30pm-5:30pm</span>
 											</td>
                             	        </tr>
                             	    </tbody>
