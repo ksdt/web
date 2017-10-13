@@ -72,7 +72,7 @@ get_header(); ?>
                             	            <td><span>Technology</span><span>webmaster@ksdt.org</span></td>
                             	            <td>
 												<span>Bijan Farahani</span>
-												<span>Tuesday 2pm-4pm</span>
+												<span>Tuesday 5pm-7pm</span>
 											</td>
                             	        </tr>
                             	        <tr>
