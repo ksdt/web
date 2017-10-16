@@ -124,6 +124,11 @@ get_header(); ?>
 				                <div class="col-lg-6 col-md-12 other-info">
 				                    <?php if ($firstPlaylist): ?>
 				                        <h2>Most Recent Playlist</h2>
+                                        <audio controls src="/playlists/<?php echo $allPlaylists[0]['PlaylistID']  . '.mp3' ?>">
+                                            Your browser does not support the <code>audio</code> element.
+                                        </audio>
+                                        <script src="<?php echo get_template_directory_uri() . '/js/plyr.js'; ?>"></script>
+                                        <script>
 				                        <span class="playlist-date"><?php echo human_time_diff(strtotime($allPlaylists[0]['PlaylistDate']), get_the_time('U', true)) . ' ago'; ?></span>
 				                        <ul class="songs">
 				                            <?php foreach ($firstPlaylist as $song): ?>
