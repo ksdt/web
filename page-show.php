@@ -124,6 +124,7 @@ get_header(); ?>
 				                <div class="col-lg-6 col-md-12 other-info">
 				                    <?php if ($firstPlaylist): ?>
 				                        <h2>Most Recent Playlist</h2>
+				                    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/plyr.css'; ?>" type="text/css" />
                                         <audio controls src="/playlists/<?php echo $allPlaylists[0]['PlaylistID']  . '.mp3' ?>">
                                             Your browser does not support the <code>audio</code> element.
                                         </audio>
