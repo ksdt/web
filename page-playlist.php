@@ -75,7 +75,7 @@ get_header(); ?>
 			                        <span class="title"><a class="cya-styles" href="/show/<?php echo $playlist['ShowName']; ?>"><?php echo $playlist['ShowName']; ?></a></span>
 			                        <span class="playlist-date">Playlist on <?php echo $playlist['PlaylistDate']; ?></span>
 				                    <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/sass/plyr.css'; ?>" type="text/css" />
-				                    <audio controls src="<?php echo 'https://f001.backblazeb2.com/file/ksdt-archive/' . str_replace(' ', '+', $playlist['ShowName']) . '+' . $playlist['PlaylistDate'] . '.mp3' ?>">
+				                    <audio controls src="/playlists/<?php echo $playlist['PlaylistID']  . '.mp3' ?>">
                                         Your browser does not support the <code>audio</code> element.
                                     </audio>
                                     <script src="<?php echo get_template_directory_uri() . '/js/plyr.js'; ?>"></script>
