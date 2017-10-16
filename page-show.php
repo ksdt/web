@@ -128,7 +128,19 @@ get_header(); ?>
                                             Your browser does not support the <code>audio</code> element.
                                         </audio>
                                         <script src="<?php echo get_template_directory_uri() . '/js/plyr.js'; ?>"></script>
-                                        <script>
+				                    <script>
+				                       var $ = $ ? $ : jQuery;
+				                       var audios = plyr.setup({
+				                           controls: ['play', 'progress', 'current-time', 'mute', 'volume']
+				                       });
+				                       audios.forEach(function (audio) {
+				                           audio.on('error', function(e) {
+				                               console.log(e);
+				                               audio.destroy();
+				                               $('audio').replaceWith('Error retrieving show.');
+				                           });
+				                       });
+				                    </script>
 				                        <span class="playlist-date"><?php echo human_time_diff(strtotime($allPlaylists[0]['PlaylistDate']), get_the_time('U', true)) . ' ago'; ?></span>
 				                        <ul class="songs">
 				                            <?php foreach ($firstPlaylist as $song): ?>

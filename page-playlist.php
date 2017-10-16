@@ -82,7 +82,7 @@ get_header(); ?>
 				                    <script>
 				                       var $ = $ ? $ : jQuery;
 				                       var audios = plyr.setup({
-				                           controls: ['play', 'current-time', 'mute', 'volume']
+				                           controls: ['play', 'progress', 'current-time', 'mute', 'volume']
 				                       });
 				                       audios.forEach(function (audio) {
 				                           audio.on('error', function(e) {
