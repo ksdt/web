@@ -28,7 +28,7 @@ get_header(); ?>
 
                                     GBMs are open to all members and non-members, and will mainly be updates about the station and upcoming events. It’s the perfect meeting to come to if you are looking to get involved further with the station, or just want to keep up with the latest news.
 
-                                    <br><br><em>Staff Meeting: </em>5PM - 6PM on Fridays<br>
+                                    <br><br><em>Staff Meeting: </em>8PM - 9:30PM on Wednesdays<br>
 
                                     Staff meetings are where the details get worked out and ideas get introduced. They are open to all staff + djs! If you are interested in becoming a staff member, sitting in on these meetings helps tremendously! (:
                                 </div>
