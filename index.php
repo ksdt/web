@@ -182,10 +182,11 @@ get_header(); ?>
 						<?php  if ($day == date('D')):?>
 							<table class = "table table-hover">
 								<tbody>
+									<tr>HELLO</tr>
 									<?php $number = 0; ?>
 									<?php foreach($showsDay as &$show): ?>
 
-
+										<!-- if show is within current hour-->
 										<tr id="module-show-<?php echo $number; ?>" style = "font-size: 1rem;" class = "module-show <?php if ( date('H') ==  date("H", strtotime($show['OnairTime']))) { echo "table-active";}?> clickable-row" data-href="/show/<?php echo $show['ShowName']; ?>">
 											<!-- <span class="title"></span> -->
 
